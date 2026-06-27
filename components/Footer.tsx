@@ -75,7 +75,7 @@ export default function Footer() {
 
         <div style={{ borderTop: "1px solid rgba(201,168,76,0.15)", marginTop: 48, paddingTop: 24, display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
           <div style={{ color: "#4A6A8A", fontSize: 13 }}>
-            © {new Date().getFullYear()} Zam Zam Door. All rights reserved.
+            © {new Date().getFullYear()} Zam Zam Automatic Door Repairs. All rights reserved.
           </div>
           <div style={{ color: "#4A6A8A", fontSize: 13 }}>
             zamzamdoor.com
