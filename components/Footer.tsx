@@ -17,8 +17,8 @@ export default function Footer() {
                 fontWeight: 900, fontSize: 18, color: "#0A1628"
               }}>ZZ</div>
               <div>
-                <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 18 }}>ZAM ZAM</div>
-                <div style={{ color: "#fff", fontSize: 10, letterSpacing: 3 }}>DOOR</div>
+                <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 16 }}>ZAM ZAM</div>
+                <div style={{ color: "#fff", fontSize: 10, letterSpacing: 1.5 }}>AUTOMATIC DOOR REPAIRS</div>
               </div>
             </div>
             <p style={{ color: "#7A9CBD", fontSize: 14, lineHeight: 1.8 }}>

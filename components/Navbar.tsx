@@ -25,8 +25,8 @@ export default function Navbar() {
             fontWeight: 900, fontSize: 18, color: "#0A1628"
           }}>ZZ</div>
           <div>
-            <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 20, lineHeight: 1.1 }}>ZAM ZAM</div>
-            <div style={{ color: "#fff", fontSize: 11, letterSpacing: 3, opacity: 0.8 }}>DOOR</div>
+            <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 16, lineHeight: 1.2 }}>ZAM ZAM</div>
+            <div style={{ color: "#fff", fontSize: 10, letterSpacing: 1.5, opacity: 0.9 }}>AUTOMATIC DOOR REPAIRS</div>
           </div>
         </a>
 
