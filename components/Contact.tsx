@@ -43,6 +43,7 @@ export default function Contact() {
                 { icon: "📍", label: "Location", value: "M40, Mussafah, Abu Dhabi, UAE" },
                 { icon: "📞", label: "Phone", value: "+971 55 989 0724" },
                 { icon: "📱", label: "WhatsApp", value: "+971 55 989 0724" },
+                { icon: "✉️", label: "Email", value: "info@zamzamdoor.com" },
                 { icon: "✉️", label: "Email", value: "zamzamadr@gmail.com" },
                 { icon: "🕐", label: "Working Hours", value: "Sun–Thu: 8AM–6PM | Emergency: 24/7" },
               ].map((c) => (
