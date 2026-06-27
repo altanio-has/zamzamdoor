@@ -1,7 +1,7 @@
 const reasons = [
   { icon: "🏆", title: "Market Leaders", desc: "Trusted by hundreds of clients across UAE and GCC for automatic door solutions." },
   { icon: "⚡", title: "Fast Response", desc: "Our team answers to repair and service requests as quickly as possible, every time." },
-  { icon: "🔩", title: "Top Brands", desc: "We work with leading global brands ensuring quality parts and reliable performance." },
+  { icon: "🔩", title: "Top Brands", desc: "Authorized dealer of DoorHan and other leading global brands for quality parts and reliable performance." },
   { icon: "📋", title: "Free Estimates", desc: "Complimentary site visits and estimates — no obligation, no hidden fees." },
   { icon: "🛡️", title: "Warranty Backed", desc: "All installations come with warranty support for your complete peace of mind." },
   { icon: "🌍", title: "UAE & GCC Coverage", desc: "Serving clients across all emirates and GCC countries with consistent quality." },

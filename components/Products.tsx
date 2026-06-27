@@ -1,6 +1,7 @@
 "use client";
 const products = [
   { icon: "🏡", title: "Residential Sectional Doors", desc: "Premium residential sectional doors with smooth operation, superior insulation, and elegant designs for UAE homes." },
+  { icon: "⚙️", title: "Automatic Door Operators", desc: "DoorHan automatic operators and motors with remote controls for sectional and garage doors — silent, reliable, and smart." },
   { icon: "🏠", title: "Garage Doors", desc: "Wide range of residential and commercial garage doors in multiple brands, colors, materials, and designs." },
   { icon: "🚧", title: "Automatic Gates", desc: "Electric gate security solutions from design through installation with updated gate opener technology." },
   { icon: "🔴", title: "Gate Barriers", desc: "Tested, reliable boom barriers from top brands, tailored for access control and security." },
