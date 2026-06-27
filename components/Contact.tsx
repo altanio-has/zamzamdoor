@@ -40,10 +40,10 @@ export default function Contact() {
             <div style={{ backgroundColor: "#112240", border: "1px solid rgba(201,168,76,0.2)", borderRadius: 12, padding: "40px 32px" }}>
               <h3 style={{ color: "#C9A84C", fontWeight: 700, fontSize: 22, marginBottom: 32 }}>Contact Information</h3>
               {[
-                { icon: "📍", label: "Location", value: "Serving All UAE & GCC" },
-                { icon: "📞", label: "Phone", value: "+971 XX XXX XXXX" },
-                { icon: "📱", label: "WhatsApp", value: "+971 XX XXX XXXX" },
-                { icon: "✉️", label: "Email", value: "info@zamzamdoor.com" },
+                { icon: "📍", label: "Location", value: "M40, Mussafah, Abu Dhabi, UAE" },
+                { icon: "📞", label: "Phone", value: "+971 55 989 0724" },
+                { icon: "📱", label: "WhatsApp", value: "+971 55 989 0724" },
+                { icon: "✉️", label: "Email", value: "zamzamadr@gmail.com" },
                 { icon: "🕐", label: "Working Hours", value: "Sun–Thu: 8AM–6PM | Emergency: 24/7" },
               ].map((c) => (
                 <div key={c.label} style={{ display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 24 }}>

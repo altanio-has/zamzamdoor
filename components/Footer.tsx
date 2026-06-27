@@ -58,9 +58,9 @@ export default function Footer() {
           <div>
             <h4 style={{ color: "#C9A84C", fontWeight: 700, fontSize: 14, marginBottom: 16, letterSpacing: 1 }}>CONTACT</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ color: "#7A9CBD", fontSize: 14 }}>📍 UAE & GCC</div>
-              <div style={{ color: "#7A9CBD", fontSize: 14 }}>📞 +971 XX XXX XXXX</div>
-              <div style={{ color: "#7A9CBD", fontSize: 14 }}>✉️ info@zamzamdoor.com</div>
+              <div style={{ color: "#7A9CBD", fontSize: 14 }}>📍 M40, Mussafah, Abu Dhabi, UAE</div>
+              <div style={{ color: "#7A9CBD", fontSize: 14 }}>📞 +971 55 989 0724</div>
+              <div style={{ color: "#7A9CBD", fontSize: 14 }}>✉️ zamzamadr@gmail.com</div>
               <a href="#contact" style={{
                 background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
                 color: "#0A1628", fontWeight: 700, fontSize: 13,
