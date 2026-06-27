@@ -24,9 +24,9 @@ export default function Products() {
             OUR PRODUCTS
           </div>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, marginBottom: 16 }}>
-            Complete Door{" "}
+            Complete Automatic Door and{" "}
             <span style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              Solutions
+              Industrial Door Solutions
             </span>
           </h2>
           <p style={{ color: "#9BB5D6", fontSize: 17, maxWidth: 600, margin: "0 auto" }}>
