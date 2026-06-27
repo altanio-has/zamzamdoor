@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 const products = ["Garage Doors", "Automatic Gates", "Gate Barriers", "Sliding Doors", "Revolving Doors", "Rolling Shutters"];
 const services = ["Installation", "Repair", "Maintenance", "24/7 Emergency", "Free Site Visit"];
 
@@ -10,12 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{
-                background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
-                width: 44, height: 44, borderRadius: 6,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontWeight: 900, fontSize: 18, color: "#0A1628"
-              }}>ZZ</div>
+              <Image src="/logo.png" alt="Zam Zam Automatic Door Repairs Logo" width={52} height={52} style={{ borderRadius: "50%" }} />
               <div>
                 <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 16 }}>ZAM ZAM</div>
                 <div style={{ color: "#fff", fontSize: 10, letterSpacing: 1.5 }}>AUTOMATIC DOOR REPAIRS</div>

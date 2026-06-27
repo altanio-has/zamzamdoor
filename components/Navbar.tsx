@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -18,12 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3">
-          <div style={{
-            background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
-            width: 44, height: 44, borderRadius: 6,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontWeight: 900, fontSize: 18, color: "#0A1628"
-          }}>ZZ</div>
+          <Image src="/logo.png" alt="Zam Zam Automatic Door Repairs Logo" width={52} height={52} style={{ borderRadius: "50%" }} />
           <div>
             <div style={{ color: "#C9A84C", fontWeight: 800, fontSize: 16, lineHeight: 1.2 }}>ZAM ZAM</div>
             <div style={{ color: "#fff", fontSize: 10, letterSpacing: 1.5, opacity: 0.9 }}>AUTOMATIC DOOR REPAIRS</div>
