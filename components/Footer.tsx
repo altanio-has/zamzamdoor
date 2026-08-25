@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 const products = ["Garage Doors", "Automatic Gates", "Gate Barriers", "Sliding Doors", "Revolving Doors", "Rolling Shutters"];
 const services = ["Installation", "Repair", "Maintenance", "24/7 Emergency", "Free Site Visit"];
 
@@ -27,11 +28,11 @@ export default function Footer() {
             <h4 style={{ color: "#C9A84C", fontWeight: 700, fontSize: 14, marginBottom: 16, letterSpacing: 1 }}>PRODUCTS</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {products.map((p) => (
-                <a key={p} href="#products" style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
+                <Link key={p} href="/#products" style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#C9A84C")}
                   onMouseLeave={e => (e.currentTarget.style.color = "#7A9CBD")}>
                   {p}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -41,11 +42,11 @@ export default function Footer() {
             <h4 style={{ color: "#C9A84C", fontWeight: 700, fontSize: 14, marginBottom: 16, letterSpacing: 1 }}>SERVICES</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {services.map((s) => (
-                <a key={s} href="#services" style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
+                <Link key={s} href="/#services" style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#C9A84C")}
                   onMouseLeave={e => (e.currentTarget.style.color = "#7A9CBD")}>
                   {s}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
