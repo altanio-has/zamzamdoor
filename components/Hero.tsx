@@ -1,3 +1,13 @@
+"use client";
+import Link from "next/link";
+
+const categoryCards = [
+  { href: "/automatic-doors", icon: "🚪", title: "Automatic Doors", desc: "Sliding, swinging & revolving" },
+  { href: "/garage-doors", icon: "🏠", title: "Garage Doors", desc: "Residential & commercial" },
+  { href: "/security-gates", icon: "🔒", title: "Security Gates", desc: "Barriers & turnstiles" },
+  { href: "/industrial-doors", icon: "🏭", title: "Industrial Doors", desc: "Roller shutters & high-speed" },
+];
+
 export default function Hero() {
   return (
     <section id="home" style={{
@@ -75,22 +85,28 @@ export default function Hero() {
 
           {/* Right — visual cards */}
           <div className="hidden md:grid grid-cols-2 gap-4">
-            {[
-              { icon: "🚪", title: "Automatic Doors", desc: "Sliding, swinging & revolving" },
-              { icon: "🏠", title: "Garage Doors", desc: "Residential & commercial" },
-              { icon: "🔒", title: "Security Gates", desc: "Barriers & turnstiles" },
-              { icon: "🏭", title: "Industrial Doors", desc: "Roller shutters & high-speed" },
-            ].map((c) => (
-              <div key={c.title} style={{
+            {categoryCards.map((c) => (
+              <Link key={c.title} href={c.href} style={{
                 backgroundColor: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(201,168,76,0.2)",
                 borderRadius: 12, padding: "24px 20px",
-                transition: "all 0.3s"
-              }}>
+                transition: "all 0.3s",
+                textDecoration: "none", display: "block"
+              }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = "#C9A84C";
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.07)";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = "rgba(201,168,76,0.2)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)";
+                }}>
                 <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
                 <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{c.title}</div>
                 <div style={{ color: "#9BB5D6", fontSize: 13 }}>{c.desc}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

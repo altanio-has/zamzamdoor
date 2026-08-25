@@ -1,20 +1,5 @@
 "use client";
-const products = [
-  { icon: "🏡", title: "Residential Sectional Doors", desc: "Premium residential sectional doors with smooth operation, superior insulation, and elegant designs for UAE homes." },
-  { icon: "⚙️", title: "Automatic Door Operators", desc: "DoorHan automatic operators and motors with remote controls for sectional and garage doors — silent, reliable, and smart." },
-  { icon: "🏠", title: "Garage Doors", desc: "Wide range of residential and commercial garage doors in multiple brands, colors, materials, and designs." },
-  { icon: "🚧", title: "Automatic Gates", desc: "Electric gate security solutions from design through installation with updated gate opener technology." },
-  { icon: "🔴", title: "Gate Barriers", desc: "Tested, reliable boom barriers from top brands, tailored for access control and security." },
-  { icon: "↔️", title: "Automatic Sliding Doors", desc: "Supply, installation, maintenance, and repair of all sliding door models for various applications." },
-  { icon: "🔄", title: "Automatic Revolving Doors", desc: "Installation and service for revolving doors of all scales with comprehensive customer support." },
-  { icon: "🚪", title: "Automatic Swinging Doors", desc: "Wide selection including folding door options, custom finishes, and retrofitting services." },
-  { icon: "⬇️", title: "Rolling Shutters", desc: "Automatic and manual roller shutters with fire-rated and non-fire-rated steel options." },
-  { icon: "🔷", title: "Polycarbonate Shutters", desc: "Transparent, unbreakable roller shutters combining visibility and strength for retail environments." },
-  { icon: "🏭", title: "Industrial Doors", desc: "Versatile, reliable door solutions for warehouses and businesses designed for security and efficiency." },
-  { icon: "🚚", title: "Loading Dock Equipment", desc: "Complete turnkey dock solutions including equipment supply, design, and installation." },
-  { icon: "⚡", title: "High-Speed Doors", desc: "Specialized doors for freezers, coolers, docks, and clean rooms to minimize air exchange." },
-  { icon: "🚦", title: "Turnstile Gates", desc: "Entrance control solutions including turnstiles, speedgates, and tripod models." },
-];
+import { products } from "@/data/products";
 
 export default function Products() {
   return (
