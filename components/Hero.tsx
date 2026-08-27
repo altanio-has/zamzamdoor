@@ -90,7 +90,9 @@ export default function Hero() {
               <Link key={c.title} href={c.href} style={{
                 backgroundColor: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(201,168,76,0.2)",
-                borderRadius: 12, padding: c.img ? "0 0 20px" : "24px 20px",
+                borderRadius: 12, padding: c.img ? 0 : "24px 20px",
+                minHeight: c.img ? 190 : undefined,
+                position: "relative",
                 overflow: "hidden",
                 transition: "all 0.3s",
                 textDecoration: "none", display: "block"
@@ -106,14 +108,24 @@ export default function Hero() {
                   e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)";
                 }}>
                 {c.img ? (
-                  <div style={{ width: "100%", height: 120, marginBottom: 16, position: "relative" }}>
+                  <>
                     <Image src={c.img} alt={c.title} fill style={{ objectFit: "cover" }} />
-                  </div>
+                    <div style={{
+                      position: "absolute", inset: 0,
+                      background: "linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.55) 55%, rgba(10,22,40,0.05) 100%)"
+                    }} />
+                    <div style={{ position: "absolute", left: 20, right: 20, bottom: 20 }}>
+                      <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{c.title}</div>
+                      <div style={{ color: "#C9DAF0", fontSize: 13 }}>{c.desc}</div>
+                    </div>
+                  </>
                 ) : (
-                  <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
+                  <>
+                    <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
+                    <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{c.title}</div>
+                    <div style={{ color: "#9BB5D6", fontSize: 13 }}>{c.desc}</div>
+                  </>
                 )}
-                <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4, paddingLeft: c.img ? 20 : 0 }}>{c.title}</div>
-                <div style={{ color: "#9BB5D6", fontSize: 13, paddingLeft: c.img ? 20 : 0 }}>{c.desc}</div>
               </Link>
             ))}
           </div>
