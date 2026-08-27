@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 const categoryCards = [
-  { href: "/automatic-doors", icon: "🚪", title: "Automatic Doors", desc: "Sliding, swinging & revolving" },
+  { href: "/automatic-doors", img: "/automatic-doors-icon.jpg", title: "Automatic Doors", desc: "Sliding, swinging & revolving" },
   { href: "/garage-doors", icon: "🏠", title: "Garage Doors", desc: "Residential & commercial" },
   { href: "/security-gates", icon: "🔒", title: "Security Gates", desc: "Barriers & turnstiles" },
   { href: "/industrial-doors", icon: "🏭", title: "Industrial Doors", desc: "Roller shutters & high-speed" },
@@ -103,7 +104,13 @@ export default function Hero() {
                   e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)";
                 }}>
-                <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
+                {c.img ? (
+                  <div style={{ width: 44, height: 44, borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
+                    <Image src={c.img} alt={c.title} width={44} height={44} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                  </div>
+                ) : (
+                  <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
+                )}
                 <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{c.title}</div>
                 <div style={{ color: "#9BB5D6", fontSize: 13 }}>{c.desc}</div>
               </Link>
