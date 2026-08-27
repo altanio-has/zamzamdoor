@@ -90,7 +90,8 @@ export default function Hero() {
               <Link key={c.title} href={c.href} style={{
                 backgroundColor: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(201,168,76,0.2)",
-                borderRadius: 12, padding: "24px 20px",
+                borderRadius: 12, padding: c.img ? "0 0 20px" : "24px 20px",
+                overflow: "hidden",
                 transition: "all 0.3s",
                 textDecoration: "none", display: "block"
               }}
@@ -105,14 +106,14 @@ export default function Hero() {
                   e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)";
                 }}>
                 {c.img ? (
-                  <div style={{ width: 44, height: 44, borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
-                    <Image src={c.img} alt={c.title} width={44} height={44} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                  <div style={{ width: "100%", height: 120, marginBottom: 16, position: "relative" }}>
+                    <Image src={c.img} alt={c.title} fill style={{ objectFit: "cover" }} />
                   </div>
                 ) : (
                   <div style={{ fontSize: 36, marginBottom: 12 }}>{c.icon}</div>
                 )}
-                <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{c.title}</div>
-                <div style={{ color: "#9BB5D6", fontSize: 13 }}>{c.desc}</div>
+                <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 4, paddingLeft: c.img ? 20 : 0 }}>{c.title}</div>
+                <div style={{ color: "#9BB5D6", fontSize: 13, paddingLeft: c.img ? 20 : 0 }}>{c.desc}</div>
               </Link>
             ))}
           </div>
