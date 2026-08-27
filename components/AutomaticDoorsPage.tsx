@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -71,46 +72,67 @@ export default function AutomaticDoorsPage() {
             {" / "}
             <span style={{ color: "#C9A84C" }}>Automatic Doors</span>
           </div>
-          <div style={{
-            display: "inline-block",
-            border: "1px solid rgba(201,168,76,0.5)",
-            borderRadius: 100,
-            padding: "6px 20px",
-            color: "#C9A84C",
-            fontSize: 13,
-            fontWeight: 600,
-            marginBottom: 24,
-            letterSpacing: 1
-          }}>
-            AUTOMATIC DOORS UAE
-          </div>
-          <h1 style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)", fontWeight: 900, lineHeight: 1.15, marginBottom: 20, maxWidth: 800 }}>
-            Best{" "}
-            <span style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              Automatic Doors
-            </span>{" "}
-            Company in UAE
-          </h1>
-          <p style={{ color: "#9BB5D6", fontSize: 18, lineHeight: 1.8, maxWidth: 640, marginBottom: 36 }}>
-            Zam Zam Door supplies, installs, and maintains automatic doors for homes, offices, malls, hospitals, and industrial sites across Abu Dhabi, Dubai, Sharjah, and the wider UAE and GCC. Sliding, swing, folding, revolving, and glass — built for smooth, silent, secure entry.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#contact" style={{
-              background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
-              color: "#0A1628", fontWeight: 700, fontSize: 16,
-              padding: "14px 32px", borderRadius: 6,
-              textDecoration: "none", display: "inline-block"
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div style={{
+                display: "inline-block",
+                border: "1px solid rgba(201,168,76,0.5)",
+                borderRadius: 100,
+                padding: "6px 20px",
+                color: "#C9A84C",
+                fontSize: 13,
+                fontWeight: 600,
+                marginBottom: 24,
+                letterSpacing: 1
+              }}>
+                AUTOMATIC DOORS UAE
+              </div>
+              <h1 style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)", fontWeight: 900, lineHeight: 1.15, marginBottom: 20 }}>
+                Best{" "}
+                <span style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                  Automatic Doors
+                </span>{" "}
+                Company in UAE
+              </h1>
+              <p style={{ color: "#9BB5D6", fontSize: 18, lineHeight: 1.8, marginBottom: 36 }}>
+                Zam Zam Door supplies, installs, and maintains automatic doors for homes, offices, malls, hospitals, and industrial sites across Abu Dhabi, Dubai, Sharjah, and the wider UAE and GCC. Sliding, swing, folding, revolving, and glass — built for smooth, silent, secure entry.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#contact" style={{
+                  background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
+                  color: "#0A1628", fontWeight: 700, fontSize: 16,
+                  padding: "14px 32px", borderRadius: 6,
+                  textDecoration: "none", display: "inline-block"
+                }}>
+                  Get Free Quote
+                </a>
+                <a href="#types" style={{
+                  border: "2px solid #C9A84C",
+                  color: "#C9A84C", fontWeight: 700, fontSize: 16,
+                  padding: "14px 32px", borderRadius: 6,
+                  textDecoration: "none", display: "inline-block"
+                }}>
+                  View Door Types
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden md:block" style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(201,168,76,0.25)",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.35)"
             }}>
-              Get Free Quote
-            </a>
-            <a href="#types" style={{
-              border: "2px solid #C9A84C",
-              color: "#C9A84C", fontWeight: 700, fontSize: 16,
-              padding: "14px 32px", borderRadius: 6,
-              textDecoration: "none", display: "inline-block"
-            }}>
-              View Door Types
-            </a>
+              <Image
+                src="/heroimage.jpg"
+                alt="Automatic sliding doors installed by Zam Zam Door in UAE"
+                width={800}
+                height={600}
+                priority
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
+            </div>
           </div>
         </div>
       </section>
