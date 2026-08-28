@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const categoryCards = [
   { href: "/automatic-doors", img: "/automatic-doors-icon.jpg", title: "Automatic Doors", desc: "Sliding, swinging & revolving" },
-  { href: "/garage-doors", icon: "🏠", title: "Garage Doors", desc: "Residential & commercial" },
+  { href: "/garage-doors", img: "/garage-doors-icon.jpg", title: "Garage Doors", desc: "Residential & commercial" },
   { href: "/security-gates", icon: "🔒", title: "Security Gates", desc: "Barriers & turnstiles" },
   { href: "/industrial-doors", icon: "🏭", title: "Industrial Doors", desc: "Roller shutters & high-speed" },
 ];

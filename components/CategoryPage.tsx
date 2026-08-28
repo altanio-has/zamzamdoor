@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -37,23 +38,46 @@ export default function CategoryPage({ slug }: { slug: ProductCategory }) {
             {" / "}
             <span style={{ color: "#C9A84C" }}>{category.title}</span>
           </div>
-          <div style={{ fontSize: 48, marginBottom: 16 }}>{category.icon}</div>
-          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: 16 }}>
-            <span style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              {category.title}
-            </span>
-          </h1>
-          <p style={{ color: "#9BB5D6", fontSize: 18, lineHeight: 1.8, maxWidth: 640 }}>
-            {category.description}
-          </p>
-          <a href="#contact" style={{
-            background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
-            color: "#0A1628", fontWeight: 700, fontSize: 16,
-            padding: "14px 32px", borderRadius: 6,
-            textDecoration: "none", display: "inline-block", marginTop: 32
-          }}>
-            Get Free Quote
-          </a>
+
+          <div className={category.heroImage ? "grid md:grid-cols-2 gap-12 items-center" : undefined}>
+            <div>
+              <div style={{ fontSize: 48, marginBottom: 16 }}>{category.icon}</div>
+              <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: 16 }}>
+                <span style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                  {category.title}
+                </span>
+              </h1>
+              <p style={{ color: "#9BB5D6", fontSize: 18, lineHeight: 1.8, maxWidth: category.heroImage ? undefined : 640 }}>
+                {category.description}
+              </p>
+              <a href="#contact" style={{
+                background: "linear-gradient(135deg, #C9A84C, #E8C96D)",
+                color: "#0A1628", fontWeight: 700, fontSize: 16,
+                padding: "14px 32px", borderRadius: 6,
+                textDecoration: "none", display: "inline-block", marginTop: 32
+              }}>
+                Get Free Quote
+              </a>
+            </div>
+
+            {category.heroImage && (
+              <div className="hidden md:block" style={{
+                borderRadius: 16,
+                overflow: "hidden",
+                border: "1px solid rgba(201,168,76,0.25)",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.35)"
+              }}>
+                <Image
+                  src={category.heroImage}
+                  alt={category.title}
+                  width={800}
+                  height={600}
+                  priority
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

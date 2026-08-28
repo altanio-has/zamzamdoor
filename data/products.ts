@@ -1,6 +1,6 @@
 export type ProductCategory = "automatic-doors" | "garage-doors" | "security-gates" | "industrial-doors";
 
-export const categories: { slug: ProductCategory; title: string; tagline: string; icon: string; description: string }[] = [
+export const categories: { slug: ProductCategory; title: string; tagline: string; icon: string; description: string; heroImage?: string }[] = [
   {
     slug: "automatic-doors",
     title: "Automatic Doors",
@@ -14,6 +14,7 @@ export const categories: { slug: ProductCategory; title: string; tagline: string
     tagline: "Residential & commercial",
     icon: "🏠",
     description: "Premium sectional and garage doors with smooth operation, superior insulation, and elegant designs, backed by DoorHan automatic operators and remote controls.",
+    heroImage: "/garage-doors-icon.jpg",
   },
   {
     slug: "security-gates",
