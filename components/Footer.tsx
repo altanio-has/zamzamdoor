@@ -2,7 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 const products = ["Garage Doors", "Automatic Gates", "Gate Barriers", "Sliding Doors", "Revolving Doors", "Rolling Shutters"];
-const services = ["Installation", "Repair", "Maintenance", "24/7 Emergency", "Free Site Visit"];
+const services = [
+  { label: "Installation", href: "/#services" },
+  { label: "Repair", href: "/#services" },
+  { label: "Maintenance", href: "/#services" },
+  { label: "24/7 Emergency", href: "/#services" },
+  { label: "Free Site Visit", href: "/#services" },
+  { label: "Water Tank", href: "https://khazzan.ae/", external: true },
+];
 
 export default function Footer() {
   return (
@@ -41,13 +48,22 @@ export default function Footer() {
           <div>
             <h4 style={{ color: "#C9A84C", fontWeight: 700, fontSize: 14, marginBottom: 16, letterSpacing: 1 }}>SERVICES</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {services.map((s) => (
-                <Link key={s} href="/#services" style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#C9A84C")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "#7A9CBD")}>
-                  {s}
-                </Link>
-              ))}
+              {services.map((s) =>
+                s.external ? (
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener"
+                    style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#C9A84C")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#7A9CBD")}>
+                    {s.label}
+                  </a>
+                ) : (
+                  <Link key={s.label} href={s.href} style={{ color: "#7A9CBD", fontSize: 14, textDecoration: "none" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#C9A84C")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#7A9CBD")}>
+                    {s.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
