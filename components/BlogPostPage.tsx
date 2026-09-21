@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -35,9 +36,29 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
           <div style={{ color: "#C9A84C", fontSize: 13, fontWeight: 600, marginBottom: 16 }}>
             {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · {post.readMinutes} min read
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, lineHeight: 1.2 }}>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, lineHeight: 1.2, marginBottom: post.heroImage ? 40 : 0 }}>
             {post.title}
           </h1>
+
+          {post.heroImage && (
+            <div style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(201,168,76,0.25)",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+              position: "relative",
+              width: "100%",
+              aspectRatio: "16 / 9",
+            }}>
+              <Image
+                src={post.heroImage}
+                alt={post.title}
+                fill
+                priority
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          )}
         </div>
       </section>
 

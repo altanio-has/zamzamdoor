@@ -8,6 +8,7 @@ export type BlogPost = {
   excerpt: string;
   date: string;
   readMinutes: number;
+  heroImage?: string;
   sections: BlogSection[];
 };
 
@@ -19,6 +20,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "A practical guide to automatic doors, automatic sliding doors, automatic garage doors, gate barriers, automatic rolling shutters, and automatic access control in UAE.",
     excerpt: "A practical guide to choosing the right automatic door, gate, or access control system for a home, office, or warehouse in the UAE.",
     date: "2026-09-20",
+    heroImage: "/blog-automatic-doors-guide-hero.jpg",
     readMinutes: 8,
     sections: [
       {
